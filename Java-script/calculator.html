@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=*, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+background: linear-gradient(to right, rgb(183, 189, 248), rgb(250, 154, 219));   
+}
+#div1{
+display: flex;
+justify-content: center;
+margin-top:300px;
+
+}
+.btn{
+    border:none;
+    border-radius: 20%;
+    padding: 10px;
+    background-color: rgb(236, 236, 186);
+    margin-left: 50px;
+}
+h1{
+    display: flex;
+    justify-content: center;   
+}
+.div2{
+display: flex;
+justify-content: center;
+margin-top: 250px;
+margin-bottom: -250px;
+}
+input{
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
+}
+h2{
+    margin-left: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="div2">
+        <br>
+<h2>Number 1 :</h1><input type="text" id="num1">
+<h2>Number 2 :</h1> <input type="text" id="num2">
+    </div>
+    <div id="div1">
+    <button class="btn" onclick="add()">ADD</button> 
+    <button class="btn" onclick="sub()">Substract</button>
+    <button class="btn" onclick="div()">Divide</button>
+    <button class="btn" onclick="mult()">Multiply</button>
+    </div>
+    <br>
+    <h1 id="res" >Result</h1>
+   <script>
+    let num1 =document.getElementById("num1");
+    let num2 =document.getElementById("num2");;
+    let res = document.getElementById("res");
+    function add(){
+        let sum =parseFloat(num1.value) + parseFloat(num2.value) ;
+        res.textContent = sum ;
+    }
+    function sub(){
+        let sub = parseFloat(num1.value) - parseFloat(num2.value);
+        res.textContent = sub ;
+    }
+    function div(){
+        let div = parseFloat(num1.value) / parseFloat(num2.value);
+        res.textContent = div ;
+    }
+    function mult(){
+        let mult = parseFloat(num1.value) * parseFloat(num2.value);
+        res.textContent = mult ;
+    }
+   </script>
+</body>
+</html>

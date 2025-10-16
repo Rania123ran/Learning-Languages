@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url("image2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container{
+            margin-top: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+        .header.content{
+            display: inline-block;
+            width: 80%;
+        }
+        .header{
+            border: solid 1px white;
+            background-color: black;
+            color: beige;
+            border-radius:10px;
+            box-shadow: 0 0 10px;
+        }
+        .content{
+            padding-top: 50px;
+            margin: 50px auto;
+            background-color: beige;
+            border: solid 2px black;
+            border-radius: 10px;
+            box-shadow: 0 0 20px;
+        }
+        .quote{
+            font-size:1.5rem ;
+            line-height: 1.5;
+        }
+        .person{
+            font-size: 1.6rem;
+            font-family: Arial, Helvetica, sans-serif;
+            color: red;
+            text-transform: uppercase;
+            margin-top: 25px;
+        }
+        .new{
+            background-color: rgb(156, 68, 68);
+            width: 80px;
+            border-radius:20%;
+            box-shadow: 0 0 10px;
+        }
+        .button{
+            padding-bottom: 20px;   
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>JavaScript Quote Generator</h2>
+        </div>
+        
+        <div class="content">
+            <div class="text">
+                <span class="quote"> "The purpose of our lives is to be happy."</span>
+            </div>
+            <div class="person">
+                Dalai Lama
+            </div>
+            <div class="button">
+                <br>
+                <button class="new" onclick="next()">New Quote</button>
+            </div>
+
+         </div>
+    </div>
+     <!--SCRIPT-->
+     <script>
+        let author = document.querySelector(".person");
+        let newquote = document.querySelector(".quote");
+        const quotes =[
+            {quote :'Life is what happens when you\'re busy making other plans',
+            person :'John Lennon'},
+            {quote :'Get busy living or get busy dying.',
+            person :'Stephen King'},
+            {quote :'You only live once, but if you do it right, once is enough.',
+            person :'Mae West'},
+            {quote :'Many of life’s failures are people who did not realize how close they were to success when they gave up.',
+            person :'Thomas A. Edison'},
+            {quote :'If you want to live a happy life, tie it to a goal, not to people or things.',
+            person :'Albert Einstein'},
+            {quote :'Never let the fear of striking out keep you from playing the game.',
+            person :'Babe Ruth'},
+            {quote :'Money and success don’t change people; they merely amplify what is already there.',
+            person :'Will Smith'},
+            {quote :'Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.',
+            person :'Steve Jobs'},
+            {quote :'Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like it’s heaven on earth.',
+            person :'ANONYME'},
+            {quote :'Curiosity about life in all of its aspects, I think, is still the secret of great creative people.',
+            person :'Leo Burnett'},
+            {quote :'Life is not a problem to be solved, but a reality to be experienced.',
+            person :'Soren Kierkegaard'},
+        ]
+        function next(){
+            
+            let random = Math.floor(Math.random() * quotes.length);
+            newquote.innerText=quotes[random].quote;
+            author.innerText=quotes[random].person;
+        }
+
+     </script>
+</body>
+</html>

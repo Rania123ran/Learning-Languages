@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body{
+            background: linear-gradient(to right ,rgb(248, 248, 118) ,rgb(248, 99, 99));
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container{
+            background-color: white;
+            margin-top: 40%;
+            border :solid  ;
+            padding: 10px 80px 30px 80px;
+            text-align: center;
+            width:350px;
+        }
+        h2{
+            font-size: 100px;
+            margin-top: -5%;
+            margin-bottom: -1px;
+        }
+        button{
+            padding: 10px;
+            border-radius: 15px;margin-left: 5px;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>COUNTER</h1>
+        <h2 id="count">0</h2>
+        <div>
+            <button class="btn1">Increase</button> <button class="btn2">Decrease</button>
+        </div>
+    </div>
+    <script>
+        let n = document.getElementById("count");
+        let btn1 = document.querySelector(".btn1");
+        let btn2 = document.querySelector(".btn2");
+        let cnt = 0
+        btn1.addEventListener("click",function(){
+            cnt += 1 ;
+            n.textContent = cnt ;
+        })
+        btn2.addEventListener("click",function(){
+            cnt -= 1 ;
+            n.textContent = cnt ;
+        })
+    </script>
+</body>
+</html>

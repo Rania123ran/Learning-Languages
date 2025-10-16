@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:linear-gradient(to right,rgb(3, 51, 28),rgb(8, 181, 66)) ;
+        }
+        h1{
+            color: goldenrod;
+        }
+        #div1{
+            text-align: center;
+            margin-top:200px;
+            font-weight: bolder;
+        }
+        h3{
+            color: white;
+            font-style: italic;
+        }
+        .btn{
+            background-color: goldenrod;
+            border: none;
+            color: green;
+            box-shadow: 5px 1px 10px black;
+            border-radius: 25px;
+            width: 150px;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2" >
+              <h1>Blackjack</h1>
+        <h3 id="message">Want to play a round ?</h3>
+        <h3 id="cards">Cards :</h3>
+        <h3 id="sum">Sum :</h3>
+        <button class="btn" id="startgame" onclick="start1()">START GAME</button><br>
+        <button class="btn" id="newcard" onclick="newcard()">NEW CARD</button>
+        <br>
+        <p id="pp"></p>
+    </div>
+      
+    </div>
+    <script> 
+    let msg = document.querySelector("#message");
+        let sm = document.querySelector("#sum");
+        let cards = document.getElementById("cards");
+        let para = document.getElementById("pp");
+        let obj = {nom:"per",price:200};
+        para.textContent =  obj.nom +" $" + obj.price ;
+        let tab = [];
+        let sum = 0 ;
+        let hasBJ = false ;
+        isAlive = false ;
+     function randomnum(){
+            let n = Math.floor(Math.random()*13+1);
+            if(n === 1) return 11 ; 
+            else if(n>10) return 10 ; 
+            else return n ;
+        }
+        function start1(){
+            isAlive = true ;
+            let card1 = randomnum();
+            let card2 = randomnum();
+            tab[0]=card1;
+            tab[1] = card2 ;
+            sum = card1 + card2 ;
+            start2();
+        }
+        function start2(){
+            cards.textContent = "Cards : " ;
+            sm.textContent = "Sum : " + sum ;
+            for(let i = 0 ; i<tab.length;i++){
+               cards.textContent += tab[i] +" ";
+            }
+         
+        if(sum<21){message = "Do you want to draw a new card ?😊"}
+        else if (sum === 21){message = "Bingo ! You've got Blackjack !😎";hasBJ= true ;}
+        else {message ="You're out of the game .😏";isAlive = false ;}
+        msg.textContent = message ;
+        
+        }
+        function newcard(){
+            if(isAlive == true && hasBJ == false){
+            let card3 = randomnum();
+            tab.push(card3);
+            sum += card3 ;
+            start2();
+            }
+            
+        }
+    </script>
+</body>
+</html>
