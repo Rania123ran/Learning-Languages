@@ -1,0 +1,135 @@
+/*Avert*/
+.avert-h4{
+    color: rgb(176, 17, 17);
+}
+.avert-div{
+    background-color: rgba(238, 155, 155, 0.679);
+   padding: 5px;
+   margin: 5px;
+   text-align: center;
+   border-radius: 10px;
+}
+/*Taches.jsx*/
+.Taches-div {
+    text-align: center;
+    width: 400px;
+    margin: auto;
+}
+.Taches-div p{
+    background-color: rgba(128, 128, 128, 0.123);
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid gray;
+
+}
+/*Compteur*/
+.Cnt-div{
+    display: flex;
+    justify-content: center;
+}
+.Cnt-h1{
+    text-align: center;
+}
+.Cnt-div p {
+font-size: larger;
+}
+.Cnt-div button{
+background-color: rgb(174, 50, 50);
+border-radius: 50%;
+margin-left: 10px;
+padding: 10px;
+}
+.Eteint{
+    background-color: red;
+    padding: 11px;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid red;
+}
+.Allumé{
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border:  1px solid green;
+}
+.BtnBascule-div{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.test1-table {
+    border-collapse : collapse ;
+}
+.cntv1-div{
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    width: 50px;
+    margin-left: 80px;
+}
+.cntv1-div button {
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 5px;
+    
+}
+.app-div1 {
+    display: flex;
+   
+}
+/*CrudYt*/
+.div-crud1{
+    display:  block;
+}
+/*classe formulaire*/
+.div-formulaire {
+    padding-bottom:10px ;
+    display:grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+    background-color: beige;
+    width: 500px;
+  }
+  
+  .div-formulaire .form-row {
+    margin-bottom: 10px;
+  }
+  .div-formulaire input{
+     padding: 8px;
+  }
+  .div-formulaire label,
+  .div-formulaire input {
+    display: block;
+    width: 100%; 
+    margin: 10px 0;
+  }
+  .div-formulaire button{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+  }
+  .div2 h3{
+    color: green;
+  }
+  .div2{
+    margin: 20px 0px 20px 0;
+    padding: 20px 0px 20px 0px;
+    background-color: rgba(0, 128, 0, 0.174);
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+    width: 500px;
+  }
+  .languages{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .languages input {
+    padding: 10px;
+  }
