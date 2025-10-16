@@ -1,0 +1,17 @@
+.div1{
+    border : 1px solid green ; 
+    border-radius: 5px;
+    text-align: center;
+    padding: 40px;
+    
+}
+span{
+    color: green;
+}
+.div2{
+    background-color: rgba(149, 203, 149, 0.3);
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid green;
+    border-radius: 5px;
+}

@@ -1,0 +1,16 @@
+<div class="div1">
+    <h1>Bonjour , je suis l'enseignant <span>{{nomEns}}</span></h1>
+    <p>Question posée à l'etudiant : <span>{{question}}</span></p>
+    <app-etudiant (reponseEtudiant)="RecevoirReponse($event)"></app-etudiant>
+    <div *ngIf="reponseEt" class="div2">
+        <hr style="background-color:  green;">
+
+        <p>La bonne réponse : <span>{{reponse}}</span></p>
+        <p>Réponse donnée par l'étudiant : <span>{{reponseEt}}</span></p>
+        <p>Est-ce une bonne réponse ? 
+            <span *ngIf="checkAnswer; else mauvaiseReponse">Oui</span>
+            <ng-template #mauvaiseReponse><span>Non</span></ng-template>
+          </p>
+          
+    </div>
+</div>

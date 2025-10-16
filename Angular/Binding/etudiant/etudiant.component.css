@@ -1,0 +1,22 @@
+div{
+    background-color: rgba(175, 175, 225, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    margin-left: 5px; 
+   
+}
+button{
+    background-color:rgb(58, 58, 228) ;
+    padding: 7px;
+    color: white;
+    border-radius: 5px;
+    border: blue;
+    margin-left: 5px;
+}
+input{
+    padding: 7px;
+    border-radius: 5%;
+    border: 1px solid blue;
+    margin-left: 5px; 
+}
